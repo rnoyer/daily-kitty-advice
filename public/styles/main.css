@@ -1,0 +1,85 @@
+#app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+}
+
+.title {
+  font-family: "Story Script", sans-serif;
+  font-style: normal;
+  font-size: 5em;
+  text-align: center;
+  margin: unset;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  background-color: white;
+  border: 1px solid pink;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 2em;
+  border-radius: 1em;
+  max-width: 60em;
+}
+
+.quote-container {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 20em;
+  border-radius: 1em;
+}
+
+.inputs {
+  display: flex;
+  gap: 2em;
+}
+
+.button {
+  font-size: 2em;
+  background-color: white;
+  padding: .5em;
+  border: 2px solid pink;
+  border-radius: 4px;
+}
+
+.secondary {
+  color: rgb(107, 71, 77);
+  background-color: rgb(255, 221, 227);
+}
+
+.button:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .inputs {
+    flex-direction: column;
+  }
+}
+
+.cat-bg {
+  background-image: url('/images/cat-bg.svg');
+  background-repeat: repeat;
+}
+
+.dog-bg {
+  background-image: url('/images/dog-bg.svg');
+  background-repeat: repeat;
+}

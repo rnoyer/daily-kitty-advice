@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> <%= locals.data.isCat ? "Cat" : "Dog" %> advice</title>
+  <link rel="icon" type="image/svg+xml" href=<%= locals.data.isCat ? "/images/cat-favicon.svg" : "/images/dog-favicon.svg" %>/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class=<%= locals.data.isCat ? "cat-bg" : "dog-bg" %>>
+  <div id="app-container">
+    <h1 class="title">Daily advice from <%= locals.data.isCat ? "kitty" : "doggy" %></h1>
+    <% if (locals.data) { %>
+
+      <div class="content">
+        <% if (locals.data.isMP4) { %>
+          <video class="image" autoplay loop muted width="250">
+            <source src="<%= data.image %>" type="video/mp4" />
+          </video>
+        <% } else { %>
+          <img class="image" src="<%= data.image %>"/>
+        <% } %>
+        <div class="quote-container">
+          <p><%= data.advice %></p>
+        </div>
+      </div>
+
+      <div class="inputs">
+        <form id="getAdvice" method="get">
+          <% if (locals.data.isCat) { %>
+            <input id="getcat" class="button" type="submit" value="Another advice" formaction="/">
+          <% } else { %>
+            <input id="getdog" class="button" type="submit" value="Another advice" formaction="/dog">
+          <% } %>
+        </form>
+
+        <form id="changeAnimal" method="get">
+          <% if (locals.data.isCat) { %>
+            <input id="getdog" class="button secondary" type="submit" value="Im a dog person" formaction="/dog">
+          <% } else { %>
+            <input id="getcat" class="button secondary" type="submit" value="Im a cat person" formaction="/">
+          <% } %>
+        </form>
+      </div>
+    <% } %>
+
+    <% if (locals.error) { %>
+      <div class="error-container">
+        <p>error</p>
+      </div>
+    <% } %>
+  </div>
+</body>
+
+</html>

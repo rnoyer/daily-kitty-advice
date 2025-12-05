@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <pattern id="catPattern" patternUnits="userSpaceOnUse" width="80" height="80">
+      <rect x="0" y="0" width="80" height="80" fill="#ffe0e0" />
+      <text x="10" y="60" font-size="30" font-family="sans-serif" fill="white"
+        transform="translate(0, 0) rotate(329)">🐶</text>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="800" height="600" fill="url(#catPattern)" />
+</svg>
