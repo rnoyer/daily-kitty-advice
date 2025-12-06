@@ -2,9 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 3em;
+  /* height calc 100vh minus padding top + bottom */
+  height: calc(100vh - 4.5em);
+  overflow: auto;
   align-items: center;
-  margin: 1em;
-  padding: 1em;
+  padding: 1.5em 1.5em 3em;
+  background: linear-gradient(180deg, rgb(255, 235, 235) 0%, rgba(255, 255, 255, 0) 25em);
+  ;
 }
 
 .title {
@@ -36,9 +40,14 @@
   font-size: 3em;
 }
 
-.image {
+img {
+  display: block;
   max-width: 100%;
-  max-height: 20em;
+  height: auto;
+  border-radius: 1em;
+}
+
+.media {
   border-radius: 1em;
 }
 
@@ -50,9 +59,9 @@
 .button {
   font-size: 2em;
   background-color: white;
-  padding: .5em;
+  padding: 1em;
   border: 2px solid pink;
-  border-radius: 4px;
+  border-radius: .5em;
 }
 
 .secondary {
@@ -73,6 +82,8 @@
     flex-direction: column;
   }
 }
+
+
 
 .cat-bg {
   background-image: url('/images/cat-bg.svg');

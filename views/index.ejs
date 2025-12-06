@@ -19,11 +19,13 @@
 
       <div class="content">
         <% if (locals.data.isMP4) { %>
-          <video class="image" autoplay loop muted width="250">
+          <video class="media" autoplay loop muted>
             <source src="<%= data.image %>" type="video/mp4" />
           </video>
         <% } else { %>
-          <img class="image" src="<%= data.image %>"/>
+          <div class="media">
+            <img src="<%= data.image %>"/>
+          </div>
         <% } %>
         <div class="quote-container">
           <p><%= data.advice %></p>
