@@ -3,13 +3,13 @@
 
 <head>
   <title> <%= locals.data.isCat ? "Cat" : "Dog" %> advice</title>
-  <link rel="icon" type="image/svg+xml" href=<%= locals.data.isCat ? "/images/cat-favicon.svg" : "/images/dog-favicon.svg" %>/>
+  <link rel="icon" type="image/svg+xml" href="<%= locals.data.isCat ? '/images/cat-favicon.svg' : '/images/dog-favicon.svg' %>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/global.css">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="/styles/main.css">
 </head>
 
 <body class=<%= locals.data.isCat ? "cat-bg" : "dog-bg" %>>
@@ -20,15 +20,15 @@
       <div class="content">
         <% if (locals.data.isMP4) { %>
           <video class="media" autoplay loop muted>
-            <source src="<%= data.image %>" type="video/mp4" />
+            <source src="<%= data.imageURL %>" type="video/mp4" />
           </video>
         <% } else { %>
           <div class="media">
-            <img src="<%= data.image %>"/>
+            <img src="<%= data.imageURL %>"/>
           </div>
         <% } %>
         <div class="quote-container">
-          <p><%= data.advice %></p>
+          <p><%= data.adviceData.slip.advice %></p>
         </div>
       </div>
 
