@@ -33,13 +33,6 @@
   max-width: 60em;
 }
 
-.quote-container {
-  font-family: "Story Script", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3em;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -56,23 +49,6 @@ img {
   gap: 2em;
 }
 
-.button {
-  font-size: 2em;
-  background-color: white;
-  padding: 1em;
-  border: 2px solid pink;
-  border-radius: .5em;
-}
-
-.secondary {
-  color: rgb(107, 71, 77);
-  background-color: rgb(255, 221, 227);
-}
-
-.button:hover {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -82,8 +58,6 @@ img {
     flex-direction: column;
   }
 }
-
-
 
 .cat-bg {
   background-image: url('/images/cat-bg.svg');

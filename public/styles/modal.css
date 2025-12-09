@@ -1,0 +1,16 @@
+dialog {
+  border: 3px solid pink;
+  border-radius: 1em;
+  color: pink;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(5px);
+  background: rgb(255, 255, 255, 0.1);
+}
+
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
